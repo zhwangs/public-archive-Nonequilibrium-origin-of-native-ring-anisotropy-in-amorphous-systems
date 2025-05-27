@@ -1,0 +1,10 @@
+n 12 # number of ring members
+si_o_bond_length 1.64
+bond_tol 0.05 # tol in bond length 
+sampling_number 100 # number of random samples 
+unit_size 96 # number of atoms in each simulation
+reference_number 0 # reference for records
+tol_lower 1.63 # lower bound for start-end distance
+tol_higher 1.65 # higher bound for start-end distance
+bin_size 150 # bin size for pair distribution function statistics
+length_end 15 # max  pair distance

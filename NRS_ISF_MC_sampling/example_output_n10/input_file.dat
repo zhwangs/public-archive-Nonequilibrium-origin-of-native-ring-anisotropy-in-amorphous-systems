@@ -1,0 +1,57 @@
+n 10
+si_o_bond_length 1.64    #1.64   
+sampling_number 3000 # number of angle density (use for both generations)
+max_angle 0.1 # random rotation allowed in the unit of PI (in both structure generations )
+min_angle 0.005 #unit of PI (used only in ideal structure generations )
+distance_tol 0.001 # bond distance tolerance in minimization 
+sample_repeat 70 # number of samples (for the https://file+.vscode-resource.vscode-cdn.net/Users/zihangwang/Desktop/MD_ring_stat/ring_stat_analysis/data/13_test/distance_distribution_.png?version%3D1728322712728generation of random structures, also coded in ideal structure. careful)
+l 8 # l value (not used if for random structure generation)
+random_shift 0 # shift axis (not used for all)
+reference_number 11 # reference for records
+critical_tol 1 # for critical_hist. min distance 
+max_step 500 # max folding steps before restart
+max_l 11  # This is the number of atoms in between two fixed points. max rotation l for folding (used also for random generations)
+min_l 1 # min rotation l for folding (used also for random generations)
+total_sample 500 # total sample for the statistics 
+max_val 100 # gamma max in fitting plot
+tol_min 0.7 # min tol (only use if vary tol, file: stats_for_single_structure_vary_tol_step2)
+tol_max 1.3 # max tol (only use if vary tol, file: stats_for_single_structure_vary_tol_step2)
+angle_index 1 # structure number (only use if vary tol, file: stats_for_single_structure_vary_tol_step2)
+lower_cut_off 1 # cut off for data points below (only use if vary tol, file: stats_for_single_structure_vary_tol_step2)
+upper_cut_off 100 # cut off for data points above (only use if vary tol, file: stats_for_single_structure_vary_tol_step2) 
+fixed_number_of_operation 15 # The number of operations before recording the tol, file: stats_fixed_T_step2
+target_min 1.62 # this is for random generations. si_o_bond_length-target_min sets the min distance. If is min is smaller, it sample again to ensure the result is physical. 
+ony_odd -1 # random l pick for odd (only Si are used for binding site if 1. for l eveything in the range, -1)
+bin_size 60 # bin size for hist in fitting program
+bin_min 0 # bin range in log. 
+bin_max 6 # bin range in log. 
+exp_bin_max 1.2 # bin max for fitting the exp. Remember, the fitting is for the ratio.
+init_bin_min 0 # bin range for init square in log
+init_bin_max 4 # bin range for init square in log
+init_exp_bin_max 10 # bin range for init square  
+init_bin_size 60 # binsize for init square  
+structure_sweep 3 # the index of the structure for sweeping number operations
+num_operation_max 80 # for sweep used only. The max num_operation for the sweep
+cutoff_for_max_angle 0.5 # the max angle of minimization can achieve in step2 in the unit of pi. 
+target_max 10 # keep this large. this is for random generations. bond si_o_bond_length-target_max sets the max distance. 
+sweep_min_angle 0.35 # for sweep angle only. This sets the lower value for the angle sweep.
+sweep_max_angle 0.55 # for sweep angle only. This sets the upper value for the angle sweep.
+sweep_min_number_of_operation 2 # for sweep # of operations only. This sets lower value for the sweep. 
+sweep_max_number_of_operation 11 # for sweep # of operations only. This sets upper value for the sweep. 
+sweep_density 4 # for sweep only. The density for the sweep 
+sio_strength 0 # In the optimization function, the coeff of the sio term. 
+oo_strength 0 # In the optimization function, the coeff of the o-o term (about 2.7). 
+sisi_strength 0 # In the optimization function, the coeff of the si-si term (about 3.1). 
+si_o_second_nn_1_strength 0 # In the optimization function, the coeff of the second nearist neighbor si-o term, closer one. There are two.
+si_o_second_nn_2_strength 0 # In the optimization function, the coeff of the second nearist neighbor si-o term, further one. There are two.
+bin_size_pair_distribution 100 # pair distribution function bin size. Make sure this has the same density as the one for total hist
+length_end 10 # pair distribution function maximum distance. Make sure this has the same density as the one for total hist
+unit_size 20 # (not used) pair distribution function unit size (number of ring elments, which is n in the first line). 
+cut_off 2.3 # for random init with GDP at least larger than this. 
+scale_value 10 # enlarge the ideal ring so that orentation effect could be reduced. 
+init_bin_for_rough -2 # in plot_coord rough bin size
+init_bin_max_for_rough 0 #in plot_coord rough bin size
+distance_max 5 # max of the radial distance
+distance_min 0 # min of the radial distance
+distance_bin_size 100  # bin size of the radial distance
+middle_repeat 24 #no need to be smaller than sample_repeat. first middle_repeat number of folding with min_angle. then with max_angle.
